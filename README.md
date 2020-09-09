@@ -86,5 +86,5 @@ method newton's-sqrt
 
 Calculates square root for the given number.
 
-Same as `newton's-root(root =` 2, :$number)>
+Same as `newton's-root(root => 2, :$number)`
 

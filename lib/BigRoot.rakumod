@@ -1,4 +1,4 @@
-unit class BigRoot:ver<0.0.3>:auth<github:juliodcs>;
+unit class BigRoot:ver<0.0.4>:auth<github:juliodcs>;
 
 # Subset definitions
 my subset PositiveNumber where { $_ >= 0 and $_ < ∞ };
@@ -163,6 +163,6 @@ Calculates the nth-root for the given number
 
 Calculates square root for the given number.
 
-Same as C<newton's-root(root => 2, :$number)>
+Same as C<<newton's-root(root => 2, :$number)>>
 
 =end pod
