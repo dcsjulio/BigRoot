@@ -14,7 +14,7 @@ SYNOPSIS
     BigRoot.precision = 50;
 
     my $root2 = BigRoot.newton's-sqrt: 2;
-    # 1.41421...
+    # 1.41421356237309504880168872420969807856967187537695
 
     say $root2.WHAT;
     # (FatRat)
@@ -86,5 +86,5 @@ method newton's-sqrt
 
 Calculates square root for the given number.
 
-Same as `newton's-root(2, $number)`
+Same as `newton's-root(root =` 2, :$number)>
 

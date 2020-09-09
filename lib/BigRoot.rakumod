@@ -1,4 +1,4 @@
-unit class BigRoot:ver<0.0.2>:auth<github:juliodcs>;
+unit class BigRoot:ver<0.0.3>:auth<github:juliodcs>;
 
 # Subset definitions
 my subset PositiveNumber where { $_ >= 0 and $_ < ∞ };
@@ -101,7 +101,7 @@ BigRoot - Class for supporting roots with arbitrary precision.
     BigRoot.precision = 50;
 
     my $root2 = BigRoot.newton's-sqrt: 2;
-    # 1.41421...
+    # 1.41421356237309504880168872420969807856967187537695
 
     say $root2.WHAT;
     # (FatRat)
@@ -163,6 +163,6 @@ Calculates the nth-root for the given number
 
 Calculates square root for the given number.
 
-Same as C<newton's-root(2, $number)>
+Same as C<newton's-root(root => 2, :$number)>
 
 =end pod
