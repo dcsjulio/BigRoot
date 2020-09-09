@@ -1,3 +1,5 @@
+[![Actions Status](https://github.com/juliodcs/BigRoot/workflows/test/badge.svg)](https://github.com/juliodcs/BigRoot/actions)
+
 NAME
 ====
 
@@ -42,7 +44,7 @@ SYNOPSIS
 DESCRIPTION
 ===========
 
-This module provides a way of having arbitrary precision for roots. In order to do that it calculates the roots using [Nethon's method](https://en.wikipedia.org/wiki/Newton%27s_method) and uses raku's `FatRat` primitives.
+This module provides a way of having arbitrary precision for roots. In order to do that it calculates the roots using [Newton's method](https://en.wikipedia.org/wiki/Newton%27s_method) and uses raku's `FatRat` primitives.
 
 The module supports rooting `Int`, `Num`, and `Rational` numbers and allows using a Rational number as the root. Also, the level of precision can be changed.
 
@@ -58,7 +60,7 @@ Allows for getting/setting the level of precision. Defaults to 30.
 
 To put precision into scale:
 
-  * NASA uses 15 decimals for Pi: https://www.jpl.nasa.gov/edu/news/2016/3/16/how-many-decimals-of-pi-do-we-really-need/
+  * [NASA uses 15 decimals for Pi](https://www.jpl.nasa.gov/edu/news/2016/3/16/how-many-decimals-of-pi-do-we-really-need/)
 
   * 1/10^30: a millimeter compared to the diameter of the universe
 

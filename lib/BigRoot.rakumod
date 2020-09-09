@@ -1,4 +1,4 @@
-unit class BigRoot:ver<0.0.1>:auth<github:juliodcs>;
+unit class BigRoot:ver<0.0.2>:auth<github:juliodcs>;
 
 # Subset definitions
 my subset PositiveNumber where { $_ >= 0 and $_ < ∞ };
@@ -12,7 +12,7 @@ method use-cache is rw {
 
 # To put precision into scale:
 #   * NASA uses 15 decimals for Pi:
-#     https://www.jpl.nasa.gov/edu/news/2016/3/16/how-many-decimals-of-pi-do-we-really-need/
+#     See: https://www.jpl.nasa.gov/edu/news/2016/3/16/how-many-decimals-of-pi-do-we-really-need/
 #   * 1/10^30: a millimeter compared to the diameter of the universe
 #   * 1/10^35: diameter of a human hair compared to the diameter of the universe
 #   * 1/10^42: size of a proton compared to the diameter of the universe
@@ -130,7 +130,7 @@ BigRoot - Class for supporting roots with arbitrary precision.
 
 =head1 DESCRIPTION
 
-This module provides a way of having arbitrary precision for roots. In order to do that it calculates the roots using L<Nethon's method|https://en.wikipedia.org/wiki/Newton%27s_method> and uses raku's C<FatRat> primitives.
+This module provides a way of having arbitrary precision for roots. In order to do that it calculates the roots using L<Newton's method|https://en.wikipedia.org/wiki/Newton%27s_method> and uses raku's C<FatRat> primitives.
 
 The module supports rooting C<Int>, C<Num>, and C<Rational> numbers and allows using a Rational number as the root. Also, the level of precision can be changed.
 
@@ -144,7 +144,7 @@ Allows for getting/setting the level of precision. Defaults to 30.
 
 To put precision into scale:
 
-=item NASA uses 15 decimals for Pi: https://www.jpl.nasa.gov/edu/news/2016/3/16/how-many-decimals-of-pi-do-we-really-need/
+=item L<NASA uses 15 decimals for Pi|https://www.jpl.nasa.gov/edu/news/2016/3/16/how-many-decimals-of-pi-do-we-really-need/>
 =item 1/10^30: a millimeter compared to the diameter of the universe
 =item 1/10^35: diameter of a human hair compared to the diameter of the universe
 =item 1/10^42: size of a proton compared to the diameter of the universe
