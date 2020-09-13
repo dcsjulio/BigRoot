@@ -41,6 +41,17 @@ SYNOPSIS
     say BigRoot.newton's-sqrt: 2;
     # 1.4142136
 
+    # By default, results are cached for given precision.
+    BigRoot.precision = 150_000;
+    BigRoot.newton's-sqrt: 2;
+    my $start = now;
+    BigRoot.newton's-sqrt: 2;
+    say (now - $start) < 0.1;
+    # (True)
+
+    # Cache can be disabled with:
+    BigRoot.use-cache = False;
+
 DESCRIPTION
 ===========
 

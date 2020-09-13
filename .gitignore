@@ -1,2 +1,4 @@
 .precomp/
 /BigRoot-*
+*.bk
+.idea/

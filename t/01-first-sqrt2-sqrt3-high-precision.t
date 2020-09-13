@@ -1,12 +1,18 @@
 use BigRoot;
 use Test;
 
-plan 2;
+plan 3;
 
 BigRoot.precision = 20_076;
 
 ok BigRoot.newton's-sqrt(2) eq sqrt2, 'First 20,076 sqrt(2) digits are correct';
+
 ok BigRoot.newton's-sqrt(3) eq sqrt3, 'First 20,076 sqrt(3) digits are correct';
+
+my Instant $start := now;
+BigRoot.newton's-sqrt(2);
+BigRoot.newton's-sqrt(3);
+ok (now - $start) < 0.5, 'Cached results are not calculated again';
 
 done-testing;
 

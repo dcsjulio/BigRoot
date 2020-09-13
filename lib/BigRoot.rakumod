@@ -1,4 +1,4 @@
-unit class BigRoot:ver<0.0.4>:auth<github:juliodcs>;
+unit class BigRoot:ver<0.0.5>:auth<github:juliodcs>;
 
 # Subset definitions
 my subset PositiveNumber where { $_ >= 0 and $_ < ∞ };
@@ -127,6 +127,17 @@ BigRoot - Class for supporting roots with arbitrary precision.
     BigRoot.precision = 7;
     say BigRoot.newton's-sqrt: 2;
     # 1.4142136
+
+    # By default, results are cached for given precision.
+    BigRoot.precision = 150_000;
+    BigRoot.newton's-sqrt: 2;
+    my $start = now;
+    BigRoot.newton's-sqrt: 2;
+    say (now - $start) < 0.1;
+    # (True)
+
+    # Cache can be disabled with:
+    BigRoot.use-cache = False;
 
 =head1 DESCRIPTION
 
