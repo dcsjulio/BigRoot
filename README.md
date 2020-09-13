@@ -99,3 +99,10 @@ Calculates square root for the given number.
 
 Same as `newton's-root(root => 2, :$number)`
 
+method use-cache
+----------------
+
+    method use-cache is rw
+
+Allows enabling/disabling result cache (cache is enabled by default)
+

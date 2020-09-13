@@ -1,4 +1,4 @@
-unit class BigRoot:ver<0.0.5>:auth<github:juliodcs>;
+unit class BigRoot:ver<0.0.6>:auth<github:juliodcs>;
 
 # Subset definitions
 my subset PositiveNumber where { $_ >= 0 and $_ < ∞ };
@@ -175,5 +175,11 @@ Calculates the nth-root for the given number
 Calculates square root for the given number.
 
 Same as C<<newton's-root(root => 2, :$number)>>
+
+=head2 method use-cache
+
+    method use-cache is rw
+
+Allows enabling/disabling result cache (cache is enabled by default)
 
 =end pod
