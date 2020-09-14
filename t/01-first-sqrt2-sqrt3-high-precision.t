@@ -1,18 +1,39 @@
 use BigRoot;
 use Test;
 
-plan 3;
-
 BigRoot.precision = 20_076;
 
-ok BigRoot.newton's-sqrt(2) eq sqrt2, 'First 20,076 sqrt(2) digits are correct';
+my Duration $sqrt2-duration;
 
-ok BigRoot.newton's-sqrt(3) eq sqrt3, 'First 20,076 sqrt(3) digits are correct';
+plan 2;
 
-my Instant $start := now;
-BigRoot.newton's-sqrt(2);
-BigRoot.newton's-sqrt(3);
-ok (now - $start) < 0.5, 'Cached results are not calculated again';
+subtest 'It calculates roots with high precision' => {
+    plan 2;
+
+    my Instant $start = now;
+    ok BigRoot.newton's-sqrt(2) eq sqrt2, 'First 20,076 sqrt(2) digits are correct';
+    $sqrt2-duration := now - $start;
+
+    ok BigRoot.newton's-sqrt(3) eq sqrt3, 'First 20,076 sqrt(3) digits are correct';
+}
+
+subtest 'Cache works as expected' => {
+    plan 2;
+
+    constant $MAX_TRIES := 100;
+    my Instant $start = now;
+    for ^$MAX_TRIES {
+        BigRoot.newton's-sqrt: 2;
+        BigRoot.newton's-sqrt: 3;
+    }
+    ok (now - $start) < $sqrt2-duration, 'Cached results are not calculated again';
+
+    BigRoot.use-cache = False;
+    $start = now;
+    BigRoot.newton's-sqrt: 2;
+    BigRoot.newton's-sqrt: 3;
+    ok (now - $start) > $sqrt2-duration, 'Do not use cache entries when cache is disabled';
+}
 
 done-testing;
 

@@ -1,21 +1,22 @@
 Revision history for BigRoot
 
 {{$NEXT}}
+  - Refactor first "01" tests
 
 0.0.6  2020-09-13T12:58:00+01:00
-    - Initial version
+  - Fix and add more details to Readme.md and POD
 
 0.0.5  2020-09-13T12:52:00+01:00
-    - Initial version
+  - Fix and add more details to Readme.md and POD
 
 0.0.4  2020-09-09T17:32:00+01:00
-    - Initial version
+  - Fix and add more details to Readme.md and POD
 
 0.0.3  2020-09-09T17:24:00+01:00
-    - Initial version
+  - Fix and add more details to Readme.md and POD
 
 0.0.2  2020-09-09T17:16:00+01:00
-    - Initial version
+  - Fix and add more details to Readme.md and POD
 
 0.0.1  2020-09-04T19:02:21+01:00
-    - Initial version
+  - Initial version
