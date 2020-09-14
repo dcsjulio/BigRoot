@@ -1,4 +1,4 @@
-unit class BigRoot:ver<0.0.7>:auth<github:juliodcs>;
+unit class BigRoot:ver<0.0.8>:auth<github:juliodcs>;
 
 # Subset definitions
 my subset PositiveNumber where { $_ >= 0 and $_ < ∞ };

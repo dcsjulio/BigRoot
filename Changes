@@ -1,6 +1,9 @@
 Revision history for BigRoot
 
-{{$NEXT}}
+0.0.8  2020-09-14T19:50:43+02:00
+  - Fix META6.json version
+
+0.0.7  2020-09-14T19:32:08+02:00
   - Refactor first "01" tests
 
 0.0.6  2020-09-13T12:58:00+01:00
