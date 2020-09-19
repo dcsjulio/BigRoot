@@ -1,25 +1,10 @@
 Revision history for BigRoot
 
-0.0.8  2020-09-14T19:50:43+02:00
+0.1.0  2020-09-19T13:01:51+02:00
   - Fix META6.json version
 
-0.0.7  2020-09-14T19:32:08+02:00
+0.0.1 - 0.0.9
+  - Fix META6.json version
   - Refactor first "01" tests
-
-0.0.6  2020-09-13T12:58:00+01:00
   - Fix and add more details to Readme.md and POD
-
-0.0.5  2020-09-13T12:52:00+01:00
-  - Fix and add more details to Readme.md and POD
-
-0.0.4  2020-09-09T17:32:00+01:00
-  - Fix and add more details to Readme.md and POD
-
-0.0.3  2020-09-09T17:24:00+01:00
-  - Fix and add more details to Readme.md and POD
-
-0.0.2  2020-09-09T17:16:00+01:00
-  - Fix and add more details to Readme.md and POD
-
-0.0.1  2020-09-04T19:02:21+01:00
   - Initial version
